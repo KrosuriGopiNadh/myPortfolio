@@ -4,239 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gopi's Portfolio</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-      }
-
-      body {
-        background: #000;
-        color: #fff;
-      }
-
-      header {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 20px;
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      nav h1 {
-        font-size: 32px;
-        color: #fff;
-        text-shadow: 2px 2px 4px yellow;
-      }
-
-      .menu-toggle {
-        display: none;
-        font-size: 28px;
-        cursor: pointer;
-        color: white;
-      }
-
-      nav ul {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-      }
-
-      nav ul li a {
-        text-decoration: none;
-        color: white;
-        text-transform: uppercase;
-        position: relative;
-      }
-
-      nav ul li a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-        height: 2px;
-        width: 0;
-        background: red;
-        transition: width 0.3s ease;
-      }
-
-      nav ul li a:hover::after {
-        width: 100%;
-      }
-
-      .intro {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
-        padding: 40px 20px;
-        min-height: calc(100vh - 100px);
-        text-align: left;
-        flex-wrap: wrap;
-      }
-
-      .intro-content {
-        max-width: 600px;
-      }
-
-      .intro h1 {
-        font-size: 40px;
-        margin: 20px 0;
-      }
-
-      .intro span {
-        color: red;
-      }
-
-      .intro img {
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-top: 20px;
-      }
-
-      .section {
-        padding: 60px 20px;
-        max-width: 1200px;
-        margin: auto;
-      }
-
-      .section h2 {
-        text-align: center;
-        font-size: 32px;
-        margin-bottom: 40px;
-        color: #ababab;
-      }
-
-      .about-me,
-      .contact {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-
-      .card,
-      .cert-card,
-      .project {
-        background: #111;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(255, 255, 0, 0.3);
-        flex: 1 1 300px;
-        transition: all 0.3s ease;
-      }
-
-      .certifications,
-      .projects {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-      }
-
-      .cert-card img,
-      .project img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        margin-bottom: 10px;
-      }
-
-      .cert-card:hover,
-      .project:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 0 20px rgba(255, 255, 0, 0.6);
-      }
-
-      .skills ul,
-      .experience ul,
-      .education ol {
-        padding-left: 20px;
-      }
-
-      .skills li,
-      .experience li,
-      .education li {
-        margin-bottom: 8px;
-      }
-
-      .contact-info,
-      .contact-form {
-        flex: 1 1 300px;
-      }
-
-      .contact-form input,
-      .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        background: #252729;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-      }
-
-      .contact-form button {
-        background: red;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-
-      footer {
-        text-align: center;
-        padding: 20px;
-        color: #ababab;
-      }
-
-      @media (max-width: 768px) {
-        .menu-toggle {
-          display: block;
-        }
-
-        nav ul {
-          flex-direction: column;
-          width: 100%;
-          display: none;
-          margin-top: 10px;
-          background: #111;
-          padding: 10px 0;
-        }
-
-        nav ul.show {
-          display: flex;
-        }
-
-        nav ul li {
-          text-align: center;
-          margin: 10px 0;
-        }
-
-        .intro {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .intro img {
-          margin: 20px 0 0 0;
-        }
-
-        .contact {
-          flex-direction: column;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -259,7 +27,7 @@
             India
           </h1>
         </div>
-        <img src="myPic.jpg" alt="Gopi" />
+        <img src="./assets/myPic.jpg" alt="Gopi" />
       </div>
     </header>
 
@@ -304,22 +72,22 @@
       <h2>Certifications</h2>
       <div class="certifications">
         <div class="cert-card">
-          <img src="nptel.png" alt="NPTEL Java" />
+          <img src="./assets/nptel.png" alt="NPTEL Java" />
           <p>
             Received from NPTEL for excellent performance in Programming in
             Java.
           </p>
         </div>
         <div class="cert-card">
-          <img src="java.jpg" alt="Java" />
+          <img src="./assets/java.jpg" alt="Java" />
           <p>Java Assessment by Careerninja LearnTube.</p>
         </div>
         <div class="cert-card">
-          <img src="ai.jpg" alt="AI Fundamentals" />
+          <img src="./assets/ai.jpg" alt="AI Fundamentals" />
           <p>AI Fundamentals by BIST Technologies Pvt Ltd.</p>
         </div>
         <div class="cert-card">
-          <img src="elewayte.jpg" alt="Web Dev" />
+          <img src="./assets/elewayte.jpg" alt="Web Dev" />
           <p>Web Development by Elewayte.</p>
         </div>
       </div>
@@ -329,22 +97,25 @@
       <h2>Projects</h2>
       <div class="projects">
         <div class="project">
-          <img src="weather.png" alt="Weather App" />
+          <img src="./assets/weather.png" alt="Weather App" />
           <p>Weather App using HTML, CSS, JS and OpenWeather API.</p>
         </div>
         <div class="project">
-          <img src="login-pro.png" alt="Login Form" />
+          <img src="./assets/login-pro.png" alt="Login Form" />
           <p>Login form built using HTML, CSS and JavaScript.</p>
         </div>
         <div class="project">
-          <img src="furniture-infrastructure.png" alt="Furniture Website" />
+          <img
+            src="./assets/furniture-infrastructure.png"
+            alt="Furniture Website"
+          />
           <p>
             A Responsive Furniture-Infrastructure website using HTML, CSS and
             JavaScript.
           </p>
         </div>
         <div class="project">
-          <img src="Travelling website.png" alt="Travel Website" />
+          <img src="./assets/Travelling website.png" alt="Travel Website" />
           <p>
             A Responsive Travelling Website using HTML, CSS, Firebase, and
             JavaScript.
